@@ -2,8 +2,8 @@
 var PluginError = require('plugin-error');
 var Vinyl = require('vinyl');
 var path = require('path');
-var rework = require('rework');
-var reworkImport = require('rework-import');
+var rework = require('@fomantic/rework');
+var reworkImport = require('@fomantic/rework-import');
 var through = require('through2');
 var parseImport = require('parse-import');
 var reworkUrl = require('rework-plugin-url');
@@ -120,7 +120,7 @@ module.exports = function(destFile, options) {
       base: firstFile.base,
       cwd: firstFile.cwd,
       path: path.join(firstFile.base, destFile),
-      contents: new Buffer(contents)
+      contents: Buffer.from(contents)
     });
     this.push(concatenatedFile);
     cb();

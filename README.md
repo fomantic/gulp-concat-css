@@ -4,6 +4,9 @@
 [![Dependency Status](https://david-dm.org/mariocasciaro/gulp-concat-css.svg)](https://david-dm.org/mariocasciaro/gulp-concat-css)
 [![Downloads](http://img.shields.io/npm/dm/gulp-concat-css.svg)](https://www.npmjs.org/package/gulp-concat-css)
 
+> ### Forked Version using updated dependencies
+> Original repo at https://github.com/mariocasciaro/gulp-concat-css
+
 > Concatenates css files, bubbling up @import statements (as per the [standard](https://developer.mozilla.org/en-US/docs/Web/CSS/@import)), and optionally rebasing urls and inlining local @import statements.
 
 ## Install

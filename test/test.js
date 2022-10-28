@@ -28,6 +28,10 @@ function fixture(file) {
   });
 }
 
+function normalizeLF(text) {
+    return String(text).replace(/\r/g, '');
+}
+
 describe('gulp-concat-css', function() {
   it('should only bubble up imports', function(done) {
     var now = Date.now();
@@ -37,7 +41,7 @@ describe('gulp-concat-css', function() {
       .pipe(through.obj(function(file, enc, cb) {
         //fs.writeFileSync("bundle.css", file.contents);
 
-        expect(String(file.contents)).to.be.equal(String(expectedFile.contents));
+        expect(String(file.contents)).to.be.equal(normalizeLF(expectedFile.contents));
         expect(path.basename(file.path)).to.be.equal(path.basename(expectedFile.path));
         expect(file.cwd, "cwd").to.be.equal(expectedFile.cwd);
         expect(file.relative, "relative").to.be.equal(expectedFile.relative);
@@ -58,7 +62,7 @@ describe('gulp-concat-css', function() {
       .pipe(through.obj(function(file, enc, cb) {
         //fs.writeFileSync("bundle.css", file.contents);
 
-        expect(String(file.contents)).to.be.equal(String(expectedFile.contents));
+        expect(String(file.contents)).to.be.equal(normalizeLF(expectedFile.contents));
         expect(path.basename(file.path)).to.be.equal(path.basename(expectedFile.path));
         expect(file.cwd, "cwd").to.be.equal(expectedFile.cwd);
         expect(file.relative, "relative").to.be.equal(expectedFile.relative);
@@ -80,7 +84,7 @@ describe('gulp-concat-css', function() {
       .pipe(through.obj(function(file, enc, cb) {
         //fs.writeFileSync("bundle.css", file.contents);
 
-        expect(String(file.contents)).to.be.equal(String(expectedFile.contents));
+        expect(String(file.contents)).to.be.equal(normalizeLF(expectedFile.contents));
         expect(path.basename(file.path)).to.be.equal(path.basename(expectedFile.path));
         expect(file.cwd, "cwd").to.be.equal(expectedFile.cwd);
         expect(file.relative, "relative").to.be.equal(expectedFile.relative);
@@ -100,7 +104,7 @@ describe('gulp-concat-css', function() {
     stream
       .pipe(through.obj(function(file, enc, cb) {
         //fs.writeFileSync("bundle.css", file.contents);
-        expect(String(file.contents)).to.be.equal(String(expectedFile.contents));
+        expect(String(file.contents)).to.be.equal(normalizeLF(expectedFile.contents));
         expect(path.basename(file.path)).to.be.equal(path.basename(expectedFile.path));
         expect(file.cwd, "cwd").to.be.equal(expectedFile.cwd);
         expect(file.relative, "relative").to.be.equal(expectedFile.relative);
