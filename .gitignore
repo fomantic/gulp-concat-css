@@ -2,6 +2,7 @@ node_modules
 .c9revisions
 .settings
 .idea
+.vscode
 .DS_Store
 npm-debug.log
 bundle.css
