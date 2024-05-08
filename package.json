@@ -1,7 +1,7 @@
 {
   "name": "@fomantic/gulp-concat-css",
   "description": "Concatenate css files, rebasing urls and inlining @import",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "homepage": "https://github.com/fomantic/gulp-concat-css",
   "author": {
     "name": "Mario Casciaro"
@@ -23,8 +23,8 @@
     "lodash.defaults": "^4.2.0",
     "parse-import": "^2.0.0",
     "plugin-error": "^2.0.0",
-    "@fomantic/rework": "^2.0.0",
-    "@fomantic/rework-import": "^3.0.0",
+    "@fomantic/rework": "^2.1.0",
+    "@fomantic/rework-import": "^3.1.0",
     "rework-plugin-url": "^1.1.0",
     "through2": "^4.0.2",
     "vinyl": "^3.0.0"
