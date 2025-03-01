@@ -22,16 +22,19 @@
   "dependencies": {
     "lodash.defaults": "^4.2.0",
     "parse-import": "^2.0.0",
-    "plugin-error": "^2.0.0",
-    "@fomantic/rework": "^2.1.0",
-    "@fomantic/rework-import": "^3.2.0",
+    "plugin-error": "^2.0.1",
+    "@fomantic/rework": "^3.0.0",
+    "@fomantic/rework-import": "^4.1.0",
     "rework-plugin-url": "^1.1.0",
     "through2": "^4.0.2",
     "vinyl": "^3.0.0"
   },
   "devDependencies": {
-    "chai": "^4.3.6",
-    "mocha": "^9.2.2"
+    "chai": "^4.5.0",
+    "mocha": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
   },
   "scripts": {
     "test": "mocha test/*.js --reporter spec"
